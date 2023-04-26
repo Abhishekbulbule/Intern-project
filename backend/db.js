@@ -27,7 +27,7 @@ const loadSampleData = async () => {
 };
 
 // db connection
-console.log("run url is ", mongoUri)
+
 const connectToMongo = async () => {
   try {
     const db = await mongoose.connect(`${mongoUri}`);
