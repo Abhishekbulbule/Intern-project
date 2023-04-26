@@ -10,9 +10,7 @@ const Sample = require("./models/Users");
 const loadSampleData = async () => {
   try {
     await Sample.deleteMany();
-    console.log("delete done");
     await Sample.insertMany(data);
-    console.log("insert done");
 
     //now removing $ character from income field
     const d = mongoose.connection.db.collection("samples");
@@ -24,7 +22,7 @@ const loadSampleData = async () => {
         d.updateMany({ _id: doc._id }, { $set: { income: doc.income } });
       });
   } catch (error) {
-    console.log("error", error);
+    console.error("Currently unavailable");
   }
 };
 
@@ -36,7 +34,7 @@ const connectToMongo = async () => {
     //connection done\
     await loadSampleData();
   } catch (error) {
-    console.log("error: ", error);
+    console.error("Something went Wrong!!");
   }
 };
 module.exports = { loadSampleData, connectToMongo };

@@ -6,7 +6,7 @@ function Query5() {
   const host = process.env.React_App_Hostname;
 
   const api = async () => {
-    const res = await fetch(`${host}/api/data/fetchfive`);
+    const res = await fetch(`${host}/api/data/fetchFive`);
     const apiData = await res.json();
     setData(apiData);
   };

@@ -6,7 +6,7 @@ function Query4() {
   const host = process.env.React_App_Hostname;
 
   const api = async () => {
-    const res = await fetch(`${host}/api/data/fetchfour`);
+    const res = await fetch(`${host}/api/data/fetchFour`);
     const apiData = await res.json();
     setData(apiData);
   };

@@ -6,7 +6,7 @@ function Query2() {
   const host = process.env.React_App_Hostname;
 
   const api = async () => {
-    const res = await fetch(`${host}/api/data/fetchtwo`);
+    const res = await fetch(`${host}/api/data/fetchTwo`);
     const apiData = await res.json();
     setData(apiData);
   };
